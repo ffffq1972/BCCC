@@ -39,6 +39,10 @@ namespace BCCC
                     }
                     break;
                 case 1: // 튜토리얼
+                    if (Game1.escPressed)
+                    {
+                        States.currentState = 0; // 메인
+                    }
                     break;
                 case 2: // 설정
                     SpriteBatch.Settings();

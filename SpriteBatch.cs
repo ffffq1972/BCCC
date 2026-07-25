@@ -13,6 +13,7 @@ namespace BCCC
         {
             Game1.Batch.Text(Texts.Maintitle.Title.text, Texts.Maintitle.Title.pos, Texts.Maintitle.Title.scale, Texts.Maintitle.Title.color, Texts.Maintitle.Title.outline, Texts.Maintitle.Title.outlineColor, Texts.Maintitle.Title.thin, Fonts.MainFont, Texts.Maintitle.Title.angle, Texts.Maintitle.Title.origin);
             Game1.Batch.Text(Texts.Maintitle.subTitle.text, Texts.Maintitle.subTitle.pos, Texts.Maintitle.subTitle.scale, Texts.Maintitle.subTitle.color, Texts.Maintitle.subTitle.outline, Texts.Maintitle.subTitle.outlineColor, Texts.Maintitle.subTitle.thin, Fonts.MainFont, Texts.Maintitle.subTitle.angle, Texts.Maintitle.subTitle.origin);
+            Game1.Batch.Text(Texts.Maintitle.Version.text, Texts.Maintitle.Version.pos, Texts.Maintitle.Version.scale, Texts.Maintitle.Version.color, Texts.Maintitle.Version.outline, Texts.Maintitle.Version.outlineColor, Texts.Maintitle.Version.thin, Fonts.MainFont, Texts.Maintitle.Version.angle, Texts.Maintitle.Version.origin);
         }
         public static void Maintitle()
         {
@@ -22,7 +23,6 @@ namespace BCCC
             Game1.Batch.Text(Texts.Maintitle.Tutorial.text, Texts.Maintitle.Tutorial.pos, Texts.Maintitle.Tutorial.scale, Texts.Maintitle.Tutorial.color, Texts.Maintitle.Tutorial.outline, Texts.Maintitle.Tutorial.outlineColor, Texts.Maintitle.Tutorial.thin, Fonts.MainFont, Texts.Maintitle.Tutorial.angle, Texts.Maintitle.Tutorial.origin);
             Game1.Batch.Text(Texts.Maintitle.Settings.text, Texts.Maintitle.Settings.pos, Texts.Maintitle.Settings.scale, Texts.Maintitle.Settings.color, Texts.Maintitle.Settings.outline, Texts.Maintitle.Settings.outlineColor, Texts.Maintitle.Settings.thin, Fonts.MainFont, Texts.Maintitle.Settings.angle, Texts.Maintitle.Settings.origin);
             Game1.Batch.Text(Texts.Maintitle.Exit.text, Texts.Maintitle.Exit.pos, Texts.Maintitle.Exit.scale, Texts.Maintitle.Exit.color, Texts.Maintitle.Exit.outline, Texts.Maintitle.Exit.outlineColor, Texts.Maintitle.Exit.thin, Fonts.MainFont, Texts.Maintitle.Exit.angle, Texts.Maintitle.Exit.origin);
-            Game1.Batch.Text(Texts.Maintitle.Version.text, Texts.Maintitle.Version.pos, Texts.Maintitle.Version.scale, Texts.Maintitle.Version.color, Texts.Maintitle.Version.outline, Texts.Maintitle.Version.outlineColor, Texts.Maintitle.Version.thin, Fonts.MainFont, Texts.Maintitle.Version.angle, Texts.Maintitle.Version.origin);
             MouseHover.Cover(Texts.Maintitle.Play);
             MouseHover.Cover(Texts.Maintitle.Tutorial);
             MouseHover.Cover(Texts.Maintitle.Settings);
