@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RollForward>Major</RollForward>
+    <PublishReadyToRun>false</PublishReadyToRun>
+    <TieredCompilation>false</TieredCompilation>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+  <PropertyGroup>
+	<Version>0.0.1-Beta</Version>
+	<AssemblyVersion>0.0.1.0</AssemblyVersion>
+	<FileVersion>0.0.1.0</FileVersion>
+	  <AssemblyTitle>B.C.C.C - 블루 아카이브 비공식 카드게임</AssemblyTitle> <!-- 왼쪽 위에 그 아이콘 오른쪽에 뜰 게임 이름 -->
+	  <Product>B.C.C.C</Product> <!-- 그냥 타이틀에 쓸 이름 -->
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Content\Fonts\NeoDunggeunmoPro.fnt" />
+    <None Remove="Content\Fonts\NeoDunggeunmoPro_0.png" />
+    <None Remove="Content\Fonts\NeoDunggeunmoPro_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Fonts\NeoDunggeunmoPro.fnt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Fonts\NeoDunggeunmoPro_0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Fonts\NeoDunggeunmoPro_1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MonoGame.Extended" Version="6.0.1" />
+    <PackageReference Include="MonoGame.Framework.WindowsDX" Version="3.8.*" />
+    <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.*" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\Data\Player\" />
+    <Folder Include="Content\Effects\Dust\" />
+    <Folder Include="Content\Music\BGM\" />
+    <Folder Include="Content\Sounds\SFX\" />
+    <Folder Include="Content\Textures\Cards\" />
+    <Folder Include="Content\Textures\Backgrounds\" />
+    <Folder Include="Content\Textures\etc\" />
+  </ItemGroup>
+  <Target Name="RestoreDotnetTools" BeforeTargets="CollectPackageReferences">
+    <Message Text="Restoring dotnet tools (this might take a while depending on your internet speed and should only happen upon building your project for the first time, or after upgrading MonoGame, or clearing your nuget cache)" Importance="High" />
+    <Exec Command="dotnet tool restore" />
+  </Target>
+</Project>
