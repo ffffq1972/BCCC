@@ -143,17 +143,26 @@ namespace BCCC
 
             Fonts.ReadFonts(GraphicsDevice);
             Texts.Init();
-            // TODO: use this.Content to load your game content here
         }
 
         protected override void Update(GameTime gameTime)
         {
             deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
-            mouseState = Mouse.GetState(); // 지금 마우스 정보 구함
+            MouseState raw = Mouse.GetState();
+            mouseState = new MouseState(
+                (int)((raw.X - _renderDestination.X) * ((float)Info.width / _renderDestination.Width)),
+                (int)((raw.Y - _renderDestination.Y) * ((float)Info.height / _renderDestination.Height)),
+                raw.ScrollWheelValue,
+                raw.LeftButton,
+                raw.MiddleButton,
+                raw.RightButton,
+                raw.XButton1,
+                raw.XButton2
+            ); // 지금 마우스 정보 구함
             States.MouseClickReset(mouseState); // 마우스 클릭 업ㄷ ㅔ이트
             // Q로 나가기
             if (Keyboard.GetState().IsKeyDown(Keys.Q) && !oldKeyboardState.IsKeyDown(Keys.Q))
-                Exit();
+                States.exit = true;
             // F4로 전체화면 전환
             if (Keyboard.GetState().IsKeyDown(Keys.F4) && !oldKeyboardState.IsKeyDown(Keys.F4))
             {
@@ -175,6 +184,7 @@ namespace BCCC
                 CalculateRenderDestination();
             }
             
+
             oldKeyboardState = Keyboard.GetState();
             Texts.Update();
             if (States.exit) Exit(); // 게임 종료
