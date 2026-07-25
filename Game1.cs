@@ -14,6 +14,7 @@ namespace BCCC
         internal static bool LeftMouse;
         internal static bool RightMouse;
         internal static KeyboardState oldKeyboardState;
+        internal static bool escPressed;
         internal static RenderTarget2D _renderTarget;
         internal static Rectangle _renderDestination;
         internal static MouseState mouseState;
@@ -184,7 +185,7 @@ namespace BCCC
                 CalculateRenderDestination();
             }
             
-
+            escPressed = Keyboard.GetState().IsKeyDown(Keys.Escape) && !oldKeyboardState.IsKeyDown(Keys.Escape);
             oldKeyboardState = Keyboard.GetState();
             Texts.Update();
             if (States.exit) Exit(); // 게임 종료

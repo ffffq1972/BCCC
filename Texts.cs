@@ -91,23 +91,39 @@ namespace BCCC
         }
         public class Settings
         {
-            public static makeVars Title;
+            public static makeVars Back;
             public static makeVars Setting1;
             public static makeVars Setting2;
             public static makeVars Setting3;
 
             public static void Init()
             {
-                Title = new makeVars("설정", new Vector2(10, 10), 8f, Color.SkyBlue, 0f, SpriteEffects.None, "lt", true, 2f, Color.Black, 0f);
-                Setting1 = new makeVars("대충 설정1", new Vector2(1400, 310), 3f, Color.White, 0f, SpriteEffects.None, "lt", true, 2f, Color.Black, 0f);
-                Setting2 = new makeVars("대충 설정2", new Vector2(1400, 460), 3f, Color.White, 0f, SpriteEffects.None, "lt", true, 2f, Color.Black, 0f);
-                Setting3 = new makeVars("대충 설정3", new Vector2(1400, 610), 3f, Color.White, 0f, SpriteEffects.None, "lt", true, 2f, Color.Black, 0f);
+                Back = new makeVars("뒤로가기", new Vector2(1500, 10), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
+                Setting1 = new makeVars("대충 설정1", new Vector2(1500, 310), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
+                Setting2 = new makeVars("대충 설정2", new Vector2(1500, 460), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
+                Setting3 = new makeVars("대충 설정3", new Vector2(1500, 610), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
             }
         }
+        public class SelectSaveFiles()
+        {
+            public static makeVars Back;
+            public static makeVars SaveFile1;
+            public static makeVars SaveFile2;
+            public static makeVars SaveFile3;
+            public static void Init()
+            {
+                Back = new makeVars("뒤로가기", new Vector2(1500, 10), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
+                SaveFile1 = new makeVars("세이브파일1", new Vector2(1500, 310), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
+                SaveFile2 = new makeVars("세이브파일2", new Vector2(1500, 460), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
+                SaveFile3 = new makeVars("세이브파일3", new Vector2(1500, 610), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
+            }
+        }
+
         public static void Init()
         {
             Maintitle.Init();
             Settings.Init();
+            SelectSaveFiles.Init();
         }
 
         public static void Update()
@@ -123,11 +139,16 @@ namespace BCCC
                 case 1: // 튜토리얼
                     break;
                 case 2: // 설정
+                    MouseHover.Check(Settings.Back);
                     MouseHover.Check(Settings.Setting1);
                     MouseHover.Check(Settings.Setting2);
                     MouseHover.Check(Settings.Setting3);
                     break;
                 case 3: // 세이브파일 선택
+                    MouseHover.Check(SelectSaveFiles.Back);
+                    MouseHover.Check(SelectSaveFiles.SaveFile1);
+                    MouseHover.Check(SelectSaveFiles.SaveFile2);
+                    MouseHover.Check(SelectSaveFiles.SaveFile3);
                     break;
                 case 4: // 게임
                     break;
