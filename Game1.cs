@@ -43,7 +43,7 @@ namespace BCCC
             /// <param name="col">Color</param>
             /// <param name="angle">float</param>
             /// <param name="origin">Vector2</param>
-            public static void Img(Texture2D img, Vector2 pos, float size = 0f, Color col = default, float angle = 0f, Vector2 origin = default) // 화면에 사진 그리기
+            public static void Img(Texture2D img, Vector2 pos, float size = 0f, Color col = default, float angle = 0f, Vector2 origin = default) // 화면에 이미지 그리기
             {
                 Vector2 size1;
                 if (col == default) col = Color.White;
