@@ -144,6 +144,7 @@ namespace BCCC
 
             Fonts.ReadFonts(GraphicsDevice);
             Texts.Init();
+            Cards.Init();
         }
 
         protected override void Update(GameTime gameTime)
