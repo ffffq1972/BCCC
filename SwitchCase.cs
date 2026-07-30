@@ -25,6 +25,7 @@ namespace BCCC
                     {
                         States.currentState = 3; // 세이브파일 선택
                         States.SelectPlayer = 0; // 플레이어 선택하는 페이지 0으로 설정
+                        Info.PlayersReset(); // 세이브파일 선택하는글자들 리셋
                     }
                     if (Texts.Maintitle.Tutorial.isHovering && Game1.LeftMouse)
                     {
@@ -61,10 +62,12 @@ namespace BCCC
                     if (Texts.SelectSaveFiles.NextPage.isHovering && Game1.LeftMouse)
                     {
                         States.SelectPlayer += 1;
+                        Info.PlayersReset();
                     }
                     if (Texts.SelectSaveFiles.PrivPage.isHovering && Game1.LeftMouse)
                     {
                         States.SelectPlayer -= 1;
+                        Info.PlayersReset();
                     }
                     if (States.SelectPlayer < 0)
                     {

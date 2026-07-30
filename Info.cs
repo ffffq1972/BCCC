@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.CompilerServices;
 using System.Xml.Linq;
+using Microsoft.Xna.Framework.Media;
 
 namespace BCCC
 {
@@ -23,6 +24,15 @@ namespace BCCC
         public static float Wh = (float)width / mywidth;
         public static float wH = (float)height / myheight;
         public static int players = 0; // 플레이어 수(만든 플레이어 데이터 수임)
+        public static List<string> Playerlist = new List<string>();
+        public static void PlayersReset()
+        {
+            Playerlist = new List<string>();
+            for (int i = 0; i < ((Playerlist.Count + 1) * 3); i++)
+            {
+                Playerlist.Add("새로 만들기");
+            }
+        }
     }
 
     internal class newPlayer

@@ -47,6 +47,7 @@ namespace BCCC
         {
             Game1.Batch.TextStart();
             DrawTitle();
+            States.ShowPlayers();
             Game1.Batch.Text(Texts.SelectSaveFiles.Back.text, Texts.SelectSaveFiles.Back.pos, Texts.SelectSaveFiles.Back.scale, Texts.SelectSaveFiles.Back.color, Texts.SelectSaveFiles.Back.outline, Texts.SelectSaveFiles.Back.outlineColor, Texts.SelectSaveFiles.Back.thin, Fonts.MainFont, Texts.SelectSaveFiles.Back.angle, Texts.SelectSaveFiles.Back.origin);
             Game1.Batch.Text(Texts.SelectSaveFiles.SaveFile1.text, Texts.SelectSaveFiles.SaveFile1.pos, Texts.SelectSaveFiles.SaveFile1.scale, Texts.SelectSaveFiles.SaveFile1.color, Texts.SelectSaveFiles.SaveFile1.outline, Texts.SelectSaveFiles.SaveFile1.outlineColor, Texts.SelectSaveFiles.SaveFile1.thin, Fonts.MainFont, Texts.SelectSaveFiles.SaveFile1.angle, Texts.SelectSaveFiles.SaveFile1.origin);
             Game1.Batch.Text(Texts.SelectSaveFiles.SaveFile2.text, Texts.SelectSaveFiles.SaveFile2.pos, Texts.SelectSaveFiles.SaveFile2.scale, Texts.SelectSaveFiles.SaveFile2.color, Texts.SelectSaveFiles.SaveFile2.outline, Texts.SelectSaveFiles.SaveFile2.outlineColor, Texts.SelectSaveFiles.SaveFile2.thin, Fonts.MainFont, Texts.SelectSaveFiles.SaveFile2.angle, Texts.SelectSaveFiles.SaveFile2.origin);
