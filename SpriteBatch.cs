@@ -51,10 +51,14 @@ namespace BCCC
             Game1.Batch.Text(Texts.SelectSaveFiles.SaveFile1.text, Texts.SelectSaveFiles.SaveFile1.pos, Texts.SelectSaveFiles.SaveFile1.scale, Texts.SelectSaveFiles.SaveFile1.color, Texts.SelectSaveFiles.SaveFile1.outline, Texts.SelectSaveFiles.SaveFile1.outlineColor, Texts.SelectSaveFiles.SaveFile1.thin, Fonts.MainFont, Texts.SelectSaveFiles.SaveFile1.angle, Texts.SelectSaveFiles.SaveFile1.origin);
             Game1.Batch.Text(Texts.SelectSaveFiles.SaveFile2.text, Texts.SelectSaveFiles.SaveFile2.pos, Texts.SelectSaveFiles.SaveFile2.scale, Texts.SelectSaveFiles.SaveFile2.color, Texts.SelectSaveFiles.SaveFile2.outline, Texts.SelectSaveFiles.SaveFile2.outlineColor, Texts.SelectSaveFiles.SaveFile2.thin, Fonts.MainFont, Texts.SelectSaveFiles.SaveFile2.angle, Texts.SelectSaveFiles.SaveFile2.origin);
             Game1.Batch.Text(Texts.SelectSaveFiles.SaveFile3.text, Texts.SelectSaveFiles.SaveFile3.pos, Texts.SelectSaveFiles.SaveFile3.scale, Texts.SelectSaveFiles.SaveFile3.color, Texts.SelectSaveFiles.SaveFile3.outline, Texts.SelectSaveFiles.SaveFile3.outlineColor, Texts.SelectSaveFiles.SaveFile3.thin, Fonts.MainFont, Texts.SelectSaveFiles.SaveFile3.angle, Texts.SelectSaveFiles.SaveFile3.origin);
+            Game1.Batch.Text(Texts.SelectSaveFiles.NextPage.text, Texts.SelectSaveFiles.NextPage.pos, Texts.SelectSaveFiles.NextPage.scale, Texts.SelectSaveFiles.NextPage.color, Texts.SelectSaveFiles.NextPage.outline, Texts.SelectSaveFiles.NextPage.outlineColor, Texts.SelectSaveFiles.NextPage.thin, Fonts.MainFont, Texts.SelectSaveFiles.NextPage.angle, Texts.SelectSaveFiles.NextPage.origin);
+            Game1.Batch.Text(Texts.SelectSaveFiles.PrivPage.text, Texts.SelectSaveFiles.PrivPage.pos, Texts.SelectSaveFiles.PrivPage.scale, Texts.SelectSaveFiles.PrivPage.color, Texts.SelectSaveFiles.PrivPage.outline, Texts.SelectSaveFiles.PrivPage.outlineColor, Texts.SelectSaveFiles.PrivPage.thin, Fonts.MainFont, Texts.SelectSaveFiles.PrivPage.angle, Texts.SelectSaveFiles.PrivPage.origin);
             MouseHover.Cover(Texts.SelectSaveFiles.Back);
             MouseHover.Cover(Texts.SelectSaveFiles.SaveFile1);
             MouseHover.Cover(Texts.SelectSaveFiles.SaveFile2);
             MouseHover.Cover(Texts.SelectSaveFiles.SaveFile3);
+            MouseHover.Cover(Texts.SelectSaveFiles.NextPage);
+            MouseHover.Cover(Texts.SelectSaveFiles.PrivPage);
             Game1.Batch.End();
         }
     }

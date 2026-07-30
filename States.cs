@@ -17,9 +17,12 @@ namespace BCCC
         /// 01 : 튜토리얼<br/>
         /// 02 : 설정<br/>
         /// 03 : 세이브파일 선택<br/>
-        /// 04 : 게임
+        /// 04 : 게임<br/>
+        /// 05 : 캐릭터 추가<br/>
+        /// 06 : 이름 입력
         /// </summary>
         public static int currentState = -1;
+        public static int SelectPlayer = 0;
         public static bool exit = false;
         public static void MouseClickReset(MouseState mouse1)
         {

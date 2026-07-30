@@ -24,6 +24,7 @@ namespace BCCC
                     if (Texts.Maintitle.Play.isHovering && Game1.LeftMouse)
                     {
                         States.currentState = 3; // 세이브파일 선택
+                        States.SelectPlayer = 0; // 플레이어 선택하는 페이지 0으로 설정
                     }
                     if (Texts.Maintitle.Tutorial.isHovering && Game1.LeftMouse)
                     {
@@ -56,6 +57,22 @@ namespace BCCC
                     if ((Texts.SelectSaveFiles.Back.isHovering && Game1.LeftMouse) || Game1.escPressed)
                     {
                         States.currentState = 0; // 메인
+                    }
+                    if (Texts.SelectSaveFiles.NextPage.isHovering && Game1.LeftMouse)
+                    {
+                        States.SelectPlayer += 1;
+                    }
+                    if (Texts.SelectSaveFiles.PrivPage.isHovering && Game1.LeftMouse)
+                    {
+                        States.SelectPlayer -= 1;
+                    }
+                    if (States.SelectPlayer < 0)
+                    {
+                        States.SelectPlayer = 0;
+                    }
+                    if (States.SelectPlayer > ((Info.players / 3) + 1))
+                    {
+                        States.SelectPlayer = ((Info.players / 3) + 1);
                     }
                     break;
                 case 4: // 게임

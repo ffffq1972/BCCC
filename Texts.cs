@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using MonoGame.Extended;
 using Microsoft.Xna.Framework.Input;
 using System.Diagnostics.CodeAnalysis;
+using Microsoft.VisualBasic.ApplicationServices;
 
 namespace BCCC 
 {
@@ -110,12 +111,16 @@ namespace BCCC
             public static makeVars SaveFile1;
             public static makeVars SaveFile2;
             public static makeVars SaveFile3;
+            public static makeVars NextPage;
+            public static makeVars PrivPage;
             public static void Init()
             {
                 Back = new makeVars("뒤로가기", new Vector2(1500, 10), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
-                SaveFile1 = new makeVars("", new Vector2(1500, 310), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
-                SaveFile2 = new makeVars("", new Vector2(1500, 460), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
-                SaveFile3 = new makeVars("", new Vector2(1500, 610), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
+                SaveFile1 = new makeVars("새로 만들기", new Vector2(1500, 310), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
+                SaveFile2 = new makeVars("새로 만들기", new Vector2(1500, 460), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
+                SaveFile3 = new makeVars("새로 만들기", new Vector2(1500, 610), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
+                NextPage = new makeVars("다음", new Vector2(1500, 890), 3f, Color.White, 0f, SpriteEffects.None, "rb", true, 2f, Color.Black, 0f);
+                PrivPage = new makeVars("이전", new Vector2(1500 - SaveFile1.width, 890), 3f, Color.White, 0f, SpriteEffects.None, "lb", true, 2f, Color.Black, 0f);
             }
         }
 
@@ -149,6 +154,8 @@ namespace BCCC
                     MouseHover.Check(SelectSaveFiles.SaveFile1);
                     MouseHover.Check(SelectSaveFiles.SaveFile2);
                     MouseHover.Check(SelectSaveFiles.SaveFile3);
+                    MouseHover.Check(SelectSaveFiles.NextPage);
+                    MouseHover.Check(SelectSaveFiles.PrivPage);
                     break;
                 case 4: // 게임
                     break;

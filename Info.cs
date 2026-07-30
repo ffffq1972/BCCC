@@ -6,7 +6,8 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
-using LiteDB;
+using System.Runtime.CompilerServices;
+using System.Xml.Linq;
 
 namespace BCCC
 {
@@ -21,5 +22,27 @@ namespace BCCC
         public static int height = 900;
         public static float Wh = (float)width / mywidth;
         public static float wH = (float)height / myheight;
+        public static int players = 0; // 플레이어 수(만든 플레이어 데이터 수임)
+    }
+
+    internal class newPlayer
+    {
+        public string Name;
+        public int Difficult;
+        public List<newStriker> Strikers;
+        public List<newSpecial> Specials;
+        public List<newGoods> Goods;
+        public int Level;
+        public int XP;
+        public newPlayer(string Name, int Difficult, List<newStriker> Strikers, List<newSpecial> Specials, List<newGoods> Goods, int Level = 1, int XP = 0)
+        {
+            this.Name = Name;
+            this.Difficult = Difficult;
+            this.Strikers = Strikers;
+            this.Specials = Specials;
+            this.Goods = Goods;
+            this.Level = Level;
+            this.XP = XP;
+        }
     }
 }
