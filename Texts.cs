@@ -91,6 +91,12 @@ namespace BCCC
                 Version = new makeVars($"v.{Info.Version}", new Vector2(10, 890), 1f, Color.White, 0f, SpriteEffects.None, "lb", true, 1f, Color.Black, 0f);
             }
         }
+
+        public class Tutorial
+        {
+
+        }
+
         public class Settings
         {
             public static makeVars Back;
@@ -106,7 +112,7 @@ namespace BCCC
                 Setting3 = new makeVars("대충 설정3", new Vector2(1500, 610), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
             }
         }
-        public class SelectSaveFiles()
+        public class SelectSaveFiles
         {
             public static makeVars Back;
             public static makeVars SaveFile1;
@@ -120,18 +126,66 @@ namespace BCCC
                 Back = new makeVars("뒤로가기", new Vector2(1500, 10), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
                 NextPage = new makeVars("다음", new Vector2(1500, 890), 3f, Color.White, 0f, SpriteEffects.None, "rb", true, 2f, Color.Black, 0f);
                 PrivPage = new makeVars("이전", new Vector2(900, 890), 3f, Color.White, 0f, SpriteEffects.None, "lb", true, 2f, Color.Black, 0f);
-                SaveFile1 = new makeVars("", new Vector2(1500, 310), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
-                SaveFile2 = new makeVars("", new Vector2(1500, 460), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
-                SaveFile3 = new makeVars("", new Vector2(1500, 610), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
+                SaveFile1 = new makeVars("", new Vector2(1400, 310), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
+                SaveFile2 = new makeVars("", new Vector2(1400, 460), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
+                SaveFile3 = new makeVars("", new Vector2(1400, 610), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
                 Page = new makeVars("(4/4)", new Vector2(1200, 890), 3f, Color.White, 0f, SpriteEffects.None, "mb", true, 2f, Color.Black, 0f);
             }
             public static void SelectReset(string one, string two, string three)
             {
-                SaveFile1 = new makeVars(one, new Vector2(1500, 310), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
-                SaveFile2 = new makeVars(two, new Vector2(1500, 460), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
-                SaveFile3 = new makeVars(three, new Vector2(1500, 610), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
+                SaveFile1 = new makeVars(one, new Vector2(1400, 310), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
+                SaveFile2 = new makeVars(two, new Vector2(1400, 460), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
+                SaveFile3 = new makeVars(three, new Vector2(1400, 610), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
                 Page.text = $"({States.SelectPlayer + 1}/4)"; // 원래 이걸로해야하는데
                 Page.text = $"{States.SelectPlayer}"; // 이게 인덱스번호나와서 안헷갈림ㅎ
+            }
+        }
+
+        public class Game
+        {
+
+        }
+
+        public class AddPlayer
+        {
+            public static makeVars Back;
+            public static makeVars Name;
+            public static makeVars NameInput;
+            public static makeVars Deck;
+            public static makeVars DeckInput;
+            public static makeVars PrivDeck;
+            public static makeVars NextDeck;
+            public static makeVars Difficult;
+            public static makeVars DifficultInput;
+            public static makeVars PrivDifficult;
+            public static makeVars NextDifficult;
+            public static makeVars Complete;
+            public static List<string> DeckList = new List<string> { "아비도스", "게헨나", "트리니티", "밀레니엄" };
+            public static int DeckIndex = 0;
+            public static List<string> DifficultList = new List<string> { "쉬움", "보통", "어려움", "???" };
+            public static int DifficultIndex = 0;
+            public static void Init()
+            {
+                Back = new makeVars("뒤로가기", new Vector2(1500, 10), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
+                Name = new makeVars("이름", new Vector2(10, 310), 3f, Color.White, 0f, SpriteEffects.None, "lt", true, 2f, Color.Black, 0f);
+                NameInput = new makeVars("이름 입력", new Vector2(1500, 310), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
+                Deck = new makeVars("스타트 덱", new Vector2(10, 460), 3f, Color.White, 0f, SpriteEffects.None, "lt", true, 2f, Color.Black, 0f);
+                DeckInput = new makeVars(DeckList[DeckIndex], new Vector2(1500, 460), 3f, Color.White, 0f, SpriteEffects.None, "mt", true, 2f, Color.Black, 0f);
+                PrivDeck = new makeVars("이전", new Vector2(1500, 460), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
+                NextDeck = new makeVars("다음", new Vector2(1500, 460), 3f, Color.White, 0f, SpriteEffects.None, "lt", true, 2f, Color.Black, 0f);
+                Difficult = new makeVars("난이도", new Vector2(10, 610), 3f, Color.White, 0f, SpriteEffects.None, "lt", true, 2f, Color.Black, 0f);
+                DifficultInput = new makeVars(DifficultList[DifficultIndex], new Vector2(1500, 610), 3f, Color.White, 0f, SpriteEffects.None, "mt", true, 2f, Color.Black, 0f);
+                PrivDifficult = new makeVars("쉽게!", new Vector2(1500, 610), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
+                NextDifficult = new makeVars("어렵게!", new Vector2(1500, 610), 3f, Color.White, 0f, SpriteEffects.None, "lt", true, 2f, Color.Black, 0f);
+                Complete = new makeVars("완료!", new Vector2(1500, 890), 3f, Color.White, 0f, SpriteEffects.None, "rb", true, 2f, Color.Black, 0f);
+            }
+            public static void NameReset(string name)
+            {
+                if (name == null || name == "")
+                {
+                    name = "이름 입력";
+                }
+                NameInput = new makeVars(name, new Vector2(1500, 310), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
             }
         }
 
@@ -169,6 +223,10 @@ namespace BCCC
                     MouseHover.Check(SelectSaveFiles.PrivPage);
                     break;
                 case 4: // 게임
+                    break;
+                case 5: // 캐릭터 추가
+                    break;
+                case 6: // 이름 입력
                     break;
                 default:
                     break;

@@ -19,7 +19,7 @@ namespace BCCC
         /// 03 : 세이브파일 선택<br/>
         /// 04 : 게임<br/>
         /// 05 : 캐릭터 추가<br/>
-        /// 06 : 이름 입력
+        /// 06 : 이름 입력<br/>
         /// </summary>
         public static int currentState = -1;
         public static int SelectPlayer = 0;
