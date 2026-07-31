@@ -25,7 +25,7 @@ namespace BCCC
                     {
                         States.currentState = 3; // 세이브파일 선택
                         States.SelectPlayer = 0; // 플레이어 선택하는 페이지 0으로 설정
-                        Texts.SelectSaveFiles.SelectReset("JSON 읽어와라", "22", "333");
+                        Texts.SelectSaveFiles.SelectReset(Info.Playerlist[(States.SelectPlayer * 3)], Info.Playerlist[(States.SelectPlayer * 3) + 1], Info.Playerlist[(States.SelectPlayer * 3) + 2]);
                     }
                     if (Texts.Maintitle.Tutorial.isHovering && Game1.LeftMouse)
                     {
@@ -41,39 +41,39 @@ namespace BCCC
                     }
                     break;
                 case 1: // 튜토리얼
-                    if (Game1.escPressed)
+                    if (Game1.Pressed.esc)
                     {
                         States.currentState = 0; // 메인
                     }
                     break;
                 case 2: // 설정
                     SpriteBatch.Settings();
-                    if ((Texts.Settings.Back.isHovering && Game1.LeftMouse) || Game1.escPressed)
+                    if ((Texts.Settings.Back.isHovering && Game1.LeftMouse) || Game1.Pressed.esc)
                     {
                         States.currentState = 0; // 메인
                     }
                     break;
                 case 3: // 세이브파일 선택
                     SpriteBatch.SelectSaveFiles();
-                    if ((Texts.SelectSaveFiles.Back.isHovering && Game1.LeftMouse) || Game1.escPressed)
+                    if ((Texts.SelectSaveFiles.Back.isHovering && Game1.LeftMouse) || Game1.Pressed.esc)
                     {
                         States.currentState = 0; // 메인
                     }
-                    if (Texts.SelectSaveFiles.NextPage.isHovering && Game1.LeftMouse)
+                    if (Texts.SelectSaveFiles.NextPage.isHovering && Game1.LeftMouse || Game1.Pressed.rightArrow)
                     {
                         if (States.SelectPlayer < 3)
                         {
                             States.SelectPlayer += 1;
+                            Texts.SelectSaveFiles.SelectReset(Info.Playerlist[(States.SelectPlayer * 3)], Info.Playerlist[(States.SelectPlayer * 3) + 1], Info.Playerlist[(States.SelectPlayer * 3) + 2]);
                         }
-                        Texts.SelectSaveFiles.SelectReset("JSON 읽어와라", "22", "333");
                     }
-                    if (Texts.SelectSaveFiles.PrivPage.isHovering && Game1.LeftMouse)
+                    if (Texts.SelectSaveFiles.PrivPage.isHovering && Game1.LeftMouse || Game1.Pressed.leftArrow)
                     {
                         if (States.SelectPlayer > 0)
                         {
                             States.SelectPlayer -= 1;
+                            Texts.SelectSaveFiles.SelectReset(Info.Playerlist[(States.SelectPlayer * 3)], Info.Playerlist[(States.SelectPlayer * 3) + 1], Info.Playerlist[(States.SelectPlayer * 3) + 2]);
                         }
-                        Texts.SelectSaveFiles.SelectReset("JSON 읽어와라", "22", "333");
                     }
                     break;
                 case 4: // 게임

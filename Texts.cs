@@ -123,14 +123,15 @@ namespace BCCC
                 SaveFile1 = new makeVars("", new Vector2(1500, 310), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
                 SaveFile2 = new makeVars("", new Vector2(1500, 460), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
                 SaveFile3 = new makeVars("", new Vector2(1500, 610), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
-                Page = new makeVars("(1/4)", new Vector2(1200, 890), 3f, Color.White, 0f, SpriteEffects.None, "mb", true, 2f, Color.Black, 0f);
+                Page = new makeVars("(4/4)", new Vector2(1200, 890), 3f, Color.White, 0f, SpriteEffects.None, "mb", true, 2f, Color.Black, 0f);
             }
             public static void SelectReset(string one, string two, string three)
             {
                 SaveFile1 = new makeVars(one, new Vector2(1500, 310), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
                 SaveFile2 = new makeVars(two, new Vector2(1500, 460), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
                 SaveFile3 = new makeVars(three, new Vector2(1500, 610), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
-                Page.text = $"({States.SelectPlayer + 1}/4)";
+                Page.text = $"({States.SelectPlayer + 1}/4)"; // 원래 이걸로해야하는데
+                Page.text = $"{States.SelectPlayer}"; // 이게 인덱스번호나와서 안헷갈림ㅎ
             }
         }
 

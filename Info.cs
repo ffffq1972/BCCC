@@ -25,14 +25,7 @@ namespace BCCC
         public static float wH = (float)height / myheight;
         public static int players = 0; // 플레이어 수(만든 플레이어 데이터 수임)
         public static int maxPlayers = 3; // 4페이지 (플레이어 데이터 수 총 12개까지)
-        public static List<string> Playerlist = new List<string>();
-        public static void PlayersUpdate()
-        {
-            for (short i = 0; i < 12; i++)
-            {
-                Playerlist.Add("새로 만들기");
-            }
-        }
+        public static List<string> Playerlist = new List<string> {"새로 만들기", "새로 만들기", "새로 만들기", "새로 만들기", "새로 만들기", "새로 만들기", "새로 만들기", "새로 만들기", "새로 만들기", "새로 만들기", "새로 만들기", "새로 만들기"};
     }
 
     internal class newPlayer
