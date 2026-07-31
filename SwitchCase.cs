@@ -26,6 +26,14 @@ namespace BCCC
                     {
                         States.currentState = 3; // 세이브파일 선택
                         States.SelectPlayer = 0; // 플레이어 선택하는 페이지 0으로 설정
+                        States.isMulti = false; // 멀티 아님
+                        Texts.SelectSaveFiles.SelectReset(Info.Playerlist[(States.SelectPlayer * 3)], Info.Playerlist[(States.SelectPlayer * 3) + 1], Info.Playerlist[(States.SelectPlayer * 3) + 2]);
+                    }
+                    if (Texts.Maintitle.MultiPlay.isHovering && Game1.LeftMouse)
+                    {
+                        States.currentState = 3; // 세이브파일 선택
+                        States.SelectPlayer = 0; // 플레이어 선택하는 페이지 0으로 설정
+                        States.isMulti = true; // 멀티플레이
                         Texts.SelectSaveFiles.SelectReset(Info.Playerlist[(States.SelectPlayer * 3)], Info.Playerlist[(States.SelectPlayer * 3) + 1], Info.Playerlist[(States.SelectPlayer * 3) + 2]);
                     }
                     if (Texts.Maintitle.Tutorial.isHovering && Game1.LeftMouse)
@@ -83,6 +91,8 @@ namespace BCCC
                     SpriteBatch.AddPlayer();
                     break;
                 case 6: // 이름 입력
+                    break;
+                case 7: // 멀티플레이
                     break;
                 default: // 예외 처리(그냥 메인화면으로가기)
                     States.currentState = 0;

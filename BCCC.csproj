@@ -38,7 +38,7 @@
     <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.*" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Content\Data\Player\" />
+    <Folder Include="Content\Data\" />
     <Folder Include="Content\Effects\Dust\" />
     <Folder Include="Content\Music\BGM\" />
     <Folder Include="Content\Sounds\SFX\" />

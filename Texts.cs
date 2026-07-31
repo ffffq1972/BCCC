@@ -76,6 +76,7 @@ namespace BCCC
             public static makeVars Title;
             public static makeVars subTitle;
             public static makeVars Play;
+            public static makeVars MultiPlay;
             public static makeVars Tutorial;
             public static makeVars Settings;
             public static makeVars Exit;
@@ -84,7 +85,8 @@ namespace BCCC
             {
                 Title = new makeVars("B.C.C.C", new Vector2(10, 0), 8f, Color.SkyBlue, 0f, SpriteEffects.None, "lt", true, 2f, Color.Black, 0f);
                 subTitle = new makeVars("Blue-archive\nCard\nCombat\nCompetition", new Vector2(10, 150), 2f, Color.SkyBlue, 0f, SpriteEffects.None, "lt", true, 1f, Color.Black, 0f);
-                Play = new makeVars("플레이", new Vector2(1500, 310), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
+                Play = new makeVars("플레이", new Vector2(1500, 160), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
+                MultiPlay = new makeVars("멀티플레이", new Vector2(1500, 310), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
                 Tutorial = new makeVars("튜토리얼", new Vector2(1500, 460), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
                 Settings = new makeVars("설정", new Vector2(1500, 610), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
                 Exit = new makeVars("나가기", new Vector2(1500, 760), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
@@ -202,6 +204,7 @@ namespace BCCC
             {
                 case 0: // 메인메뉴
                     MouseHover.Check(Maintitle.Play);
+                    MouseHover.Check(Maintitle.MultiPlay);
                     MouseHover.Check(Maintitle.Tutorial);
                     MouseHover.Check(Maintitle.Settings);
                     MouseHover.Check(Maintitle.Exit);

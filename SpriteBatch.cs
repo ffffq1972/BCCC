@@ -20,10 +20,12 @@ namespace BCCC
             Game1.Batch.TextStart();
             DrawTitle();
             Game1.Batch.Text(Texts.Maintitle.Play.text, Texts.Maintitle.Play.pos, Texts.Maintitle.Play.scale, Texts.Maintitle.Play.color, Texts.Maintitle.Play.outline, Texts.Maintitle.Play.outlineColor, Texts.Maintitle.Play.thin, Fonts.MainFont, Texts.Maintitle.Play.angle, Texts.Maintitle.Play.origin);
+            Game1.Batch.Text(Texts.Maintitle.MultiPlay.text, Texts.Maintitle.MultiPlay.pos, Texts.Maintitle.MultiPlay.scale, Texts.Maintitle.MultiPlay.color, Texts.Maintitle.MultiPlay.outline, Texts.Maintitle.MultiPlay.outlineColor, Texts.Maintitle.MultiPlay.thin, Fonts.MainFont, Texts.Maintitle.MultiPlay.angle, Texts.Maintitle.MultiPlay.origin);
             Game1.Batch.Text(Texts.Maintitle.Tutorial.text, Texts.Maintitle.Tutorial.pos, Texts.Maintitle.Tutorial.scale, Texts.Maintitle.Tutorial.color, Texts.Maintitle.Tutorial.outline, Texts.Maintitle.Tutorial.outlineColor, Texts.Maintitle.Tutorial.thin, Fonts.MainFont, Texts.Maintitle.Tutorial.angle, Texts.Maintitle.Tutorial.origin);
             Game1.Batch.Text(Texts.Maintitle.Settings.text, Texts.Maintitle.Settings.pos, Texts.Maintitle.Settings.scale, Texts.Maintitle.Settings.color, Texts.Maintitle.Settings.outline, Texts.Maintitle.Settings.outlineColor, Texts.Maintitle.Settings.thin, Fonts.MainFont, Texts.Maintitle.Settings.angle, Texts.Maintitle.Settings.origin);
             Game1.Batch.Text(Texts.Maintitle.Exit.text, Texts.Maintitle.Exit.pos, Texts.Maintitle.Exit.scale, Texts.Maintitle.Exit.color, Texts.Maintitle.Exit.outline, Texts.Maintitle.Exit.outlineColor, Texts.Maintitle.Exit.thin, Fonts.MainFont, Texts.Maintitle.Exit.angle, Texts.Maintitle.Exit.origin);
             MouseHover.Cover(Texts.Maintitle.Play);
+            MouseHover.Cover(Texts.Maintitle.MultiPlay);
             MouseHover.Cover(Texts.Maintitle.Tutorial);
             MouseHover.Cover(Texts.Maintitle.Settings);
             MouseHover.Cover(Texts.Maintitle.Exit);

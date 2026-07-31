@@ -20,9 +20,11 @@ namespace BCCC
         /// 04 : 게임<br/>
         /// 05 : 캐릭터 추가<br/>
         /// 06 : 이름 입력<br/>
+        /// 07 : 게임(멀티플레이)
         /// </summary>
         public static int currentState = -1;
         public static int SelectPlayer = 0;
+        public static bool isMulti = false;
         public static bool exit = false;
         public static void MouseClickReset(MouseState mouse1)
         {
