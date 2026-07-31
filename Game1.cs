@@ -18,6 +18,74 @@ namespace BCCC
         internal static RenderTarget2D _renderTarget;
         internal static Rectangle _renderDestination;
         internal static MouseState mouseState;
+        public static class Pressed
+        {
+            // 알파벳
+            public static bool a;
+            public static bool b;
+            public static bool c;
+            public static bool d;
+            public static bool e;
+            public static bool f;
+            public static bool g;
+            public static bool h;
+            public static bool i;
+            public static bool j;
+            public static bool k;
+            public static bool l;
+            public static bool m;
+            public static bool n;
+            public static bool o;
+            public static bool p;
+            public static bool q;
+            public static bool r;
+            public static bool s;
+            public static bool t;
+            public static bool u;
+            public static bool v;
+            public static bool w;
+            public static bool x;
+            public static bool y;
+            public static bool z;
+            // 숫자
+            public static bool zero;
+            public static bool one;
+            public static bool two;
+            public static bool three;
+            public static bool four;
+            public static bool five;
+            public static bool six;
+            public static bool seven;
+            public static bool eight;
+            public static bool nine;
+            // 화살표(방향키)
+            public static bool leftArrow;
+            public static bool rightArrow;
+            public static bool upArrow;
+            public static int downArrow;
+            // 시스템
+            public static bool esc;
+            public static bool f1;
+            public static bool f2;
+            public static bool f3;
+            public static bool f4;
+            public static bool f5;
+            public static bool f6;
+            public static bool f7;
+            public static bool f8;
+            public static bool f9;
+            public static bool f10;
+            public static bool f11;
+            public static bool f12;
+            public static bool tab;
+            public static bool minus;
+            public static bool underbar;
+            public static bool equal;
+            public static bool plus;
+            public static bool enter;
+            public static bool leftShift;
+            public static bool rightShift;
+        }
 
         public class Batch
         {
@@ -114,7 +182,9 @@ namespace BCCC
             base.Initialize();
             CalculateRenderDestination();
         }
-
+        /// <summary>
+        /// 테두리 없는 창모드
+        /// </summary>
         private void CalculateRenderDestination()
         {
             float targetAspectRatio = (float)Info.width / Info.height;
@@ -142,6 +212,7 @@ namespace BCCC
         {
             _spriteBatch = new Microsoft.Xna.Framework.Graphics.SpriteBatch(GraphicsDevice);
 
+            Info.PlayersUpdate();
             Fonts.ReadFonts(GraphicsDevice);
             Texts.Init();
             Cards.Init();

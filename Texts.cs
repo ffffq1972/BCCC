@@ -9,6 +9,7 @@ using MonoGame.Extended;
 using Microsoft.Xna.Framework.Input;
 using System.Diagnostics.CodeAnalysis;
 using Microsoft.VisualBasic.ApplicationServices;
+using MonoGame.Extended.Tilemaps;
 
 namespace BCCC 
 {
@@ -117,12 +118,19 @@ namespace BCCC
             public static void Init()
             {
                 Back = new makeVars("뒤로가기", new Vector2(1500, 10), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
-                SaveFile1 = new makeVars("새로 만들기", new Vector2(1500, 310), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
-                SaveFile2 = new makeVars("새로 만들기", new Vector2(1500, 460), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
-                SaveFile3 = new makeVars("새로 만들기", new Vector2(1500, 610), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
                 NextPage = new makeVars("다음", new Vector2(1500, 890), 3f, Color.White, 0f, SpriteEffects.None, "rb", true, 2f, Color.Black, 0f);
-                PrivPage = new makeVars("이전", new Vector2(1500 - SaveFile1.width, 890), 3f, Color.White, 0f, SpriteEffects.None, "lb", true, 2f, Color.Black, 0f);
-                Page = new makeVars("1/1", new Vector2())
+                PrivPage = new makeVars("이전", new Vector2(900, 890), 3f, Color.White, 0f, SpriteEffects.None, "lb", true, 2f, Color.Black, 0f);
+                SaveFile1 = new makeVars("", new Vector2(1500, 310), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
+                SaveFile2 = new makeVars("", new Vector2(1500, 460), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
+                SaveFile3 = new makeVars("", new Vector2(1500, 610), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
+                Page = new makeVars("(1/4)", new Vector2(1200, 890), 3f, Color.White, 0f, SpriteEffects.None, "mb", true, 2f, Color.Black, 0f);
+            }
+            public static void SelectReset(string one, string two, string three)
+            {
+                SaveFile1 = new makeVars(one, new Vector2(1500, 310), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
+                SaveFile2 = new makeVars(two, new Vector2(1500, 460), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
+                SaveFile3 = new makeVars(three, new Vector2(1500, 610), 3f, Color.White, 0f, SpriteEffects.None, "rt", true, 2f, Color.Black, 0f);
+                Page.text = $"({States.SelectPlayer + 1}/4)";
             }
         }
 

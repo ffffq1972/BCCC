@@ -23,15 +23,6 @@ namespace BCCC
         /// </summary>
         public static int currentState = -1;
         public static int SelectPlayer = 0;
-        public static void ShowPlayers()
-        {
-            Texts.SelectSaveFiles.SaveFile1.text = Info.Playerlist[((SelectPlayer) * 3)];
-            Texts.SelectSaveFiles.SaveFile2.text = Info.Playerlist[((SelectPlayer) * 3) + 1];
-            Texts.SelectSaveFiles.SaveFile3.text = Info.Playerlist[((SelectPlayer) * 3) + 2];
-            Texts.SelectSaveFiles.SaveFile1.text += $" - {(SelectPlayer / 3) + 1}";
-            Texts.SelectSaveFiles.SaveFile2.text += $" - {(SelectPlayer / 3) + 2}";
-            Texts.SelectSaveFiles.SaveFile3.text += $" - {(SelectPlayer / 3) + 3}";
-        }
         public static bool exit = false;
         public static void MouseClickReset(MouseState mouse1)
         {
