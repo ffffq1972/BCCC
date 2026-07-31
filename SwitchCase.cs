@@ -7,6 +7,7 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using static BCCC.Texts;
 
 namespace BCCC
 {
@@ -77,6 +78,11 @@ namespace BCCC
                     }
                     break;
                 case 4: // 게임
+                    break;
+                case 5: // 캐릭터 추가
+                    SpriteBatch.AddPlayer();
+                    break;
+                case 6: // 이름 입력
                     break;
                 default: // 예외 처리(그냥 메인화면으로가기)
                     States.currentState = 0;

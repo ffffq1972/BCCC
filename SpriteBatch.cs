@@ -74,5 +74,24 @@ namespace BCCC
             MouseHover.Cover(Texts.SelectSaveFiles.SaveFile3);
             Game1.Batch.End();
         }
+        public static void AddPlayer()
+        {
+            Game1.Batch.TextStart();
+            Game1.Batch.Text(Texts.AddPlayer.Back.text, Texts.AddPlayer.Back.pos, Texts.AddPlayer.Back.scale, Texts.AddPlayer.Back.color, Texts.AddPlayer.Back.outline, Texts.AddPlayer.Back.outlineColor, Texts.AddPlayer.Back.thin, Fonts.MainFont, Texts.AddPlayer.Back.angle, Texts.AddPlayer.Back.origin);
+            Game1.Batch.Text(Texts.AddPlayer.NameInput.text, Texts.AddPlayer.NameInput.pos, Texts.AddPlayer.NameInput.scale, Texts.AddPlayer.NameInput.color, Texts.AddPlayer.NameInput.outline, Texts.AddPlayer.NameInput.outlineColor, Texts.AddPlayer.NameInput.thin, Fonts.MainFont, Texts.AddPlayer.NameInput.angle, Texts.AddPlayer.NameInput.origin);
+            Game1.Batch.Text(Texts.AddPlayer.PrivDeck.text, Texts.AddPlayer.PrivDeck.pos, Texts.AddPlayer.PrivDeck.scale, Texts.AddPlayer.PrivDeck.color, Texts.AddPlayer.PrivDeck.outline, Texts.AddPlayer.PrivDeck.outlineColor, Texts.AddPlayer.PrivDeck.thin, Fonts.MainFont, Texts.AddPlayer.PrivDeck.angle, Texts.AddPlayer.PrivDeck.origin);
+            Game1.Batch.Text(Texts.AddPlayer.NextDeck.text, Texts.AddPlayer.NextDeck.pos, Texts.AddPlayer.NextDeck.scale, Texts.AddPlayer.NextDeck.color, Texts.AddPlayer.NextDeck.outline, Texts.AddPlayer.NextDeck.outlineColor, Texts.AddPlayer.NextDeck.thin, Fonts.MainFont, Texts.AddPlayer.NextDeck.angle, Texts.AddPlayer.NextDeck.origin);
+            Game1.Batch.Text(Texts.AddPlayer.PrivDifficult.text, Texts.AddPlayer.PrivDifficult.pos, Texts.AddPlayer.PrivDifficult.scale, Texts.AddPlayer.PrivDifficult.color, Texts.AddPlayer.PrivDifficult.outline, Texts.AddPlayer.PrivDifficult.outlineColor, Texts.AddPlayer.PrivDifficult.thin, Fonts.MainFont, Texts.AddPlayer.PrivDifficult.angle, Texts.AddPlayer.PrivDifficult.origin);
+            Game1.Batch.Text(Texts.AddPlayer.NextDifficult.text, Texts.AddPlayer.NextDifficult.pos, Texts.AddPlayer.NextDifficult.scale, Texts.AddPlayer.NextDifficult.color, Texts.AddPlayer.NextDifficult.outline, Texts.AddPlayer.NextDifficult.outlineColor, Texts.AddPlayer.NextDifficult.thin, Fonts.MainFont, Texts.AddPlayer.NextDifficult.angle, Texts.AddPlayer.NextDifficult.origin);
+            Game1.Batch.Text(Texts.AddPlayer.Complete.text, Texts.AddPlayer.Complete.pos, Texts.AddPlayer.Complete.scale, Texts.AddPlayer.Complete.color, Texts.AddPlayer.Complete.outline, Texts.AddPlayer.Complete.outlineColor, Texts.AddPlayer.Complete.thin, Fonts.MainFont, Texts.AddPlayer.Complete.angle, Texts.AddPlayer.Complete.origin);
+            MouseHover.Cover(Texts.AddPlayer.Back);
+            MouseHover.Cover(Texts.AddPlayer.NameInput);
+            MouseHover.Cover(Texts.AddPlayer.PrivDeck);
+            MouseHover.Cover(Texts.AddPlayer.NextDeck);
+            MouseHover.Cover(Texts.AddPlayer.PrivDifficult);
+            MouseHover.Cover(Texts.AddPlayer.NextDifficult);
+            MouseHover.Cover(Texts.AddPlayer.Complete);
+            Game1.Batch.End();
+        }
     }
 }

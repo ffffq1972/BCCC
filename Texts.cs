@@ -225,6 +225,13 @@ namespace BCCC
                 case 4: // 게임
                     break;
                 case 5: // 캐릭터 추가
+                    MouseHover.Check(AddPlayer.Back);
+                    MouseHover.Check(AddPlayer.NameInput);
+                    MouseHover.Check(AddPlayer.PrivDeck);
+                    MouseHover.Check(AddPlayer.NextDeck);
+                    MouseHover.Check(AddPlayer.PrivDifficult);
+                    MouseHover.Check(AddPlayer.NextDifficult);
+                    MouseHover.Check(AddPlayer.Complete);
                     break;
                 case 6: // 이름 입력
                     break;
