@@ -9,5 +9,6 @@ namespace BCCC
     internal class Settings
     {
         public static bool Fullscreen { get; set; }
+
     }
 }

@@ -30,5 +30,18 @@ namespace BCCC
                 this.XP = XP;
             }
         }
+
+        newPlayer p1 { get; set; }
+        newPlayer p2 { get; set; }
+        newPlayer p3 { get; set; }
+        newPlayer p4 { get; set; }
+        newPlayer p5 { get; set; }
+        newPlayer p6 { get; set; }
+        newPlayer p7 { get; set; }
+        newPlayer p8 { get; set; }
+        newPlayer p9 { get; set; }
+        newPlayer p10 { get; set; }
+        newPlayer p11 { get; set; }
+        newPlayer p12 { get; set; }
     }
 }
