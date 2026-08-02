@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BCCC
 {
-    internal class SaveData
+    internal class Data
     {
         internal class newPlayer
         {
